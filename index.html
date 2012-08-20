@@ -29,8 +29,7 @@
 				</input>
 				<input type="text" name="task" class="todo-input" placeholder="task" autofocus />
 				</input>
-				<textarea name="details" class="todo-input" placeholder="more details" cols="30" rows="5">
-				</textarea>
+				<textarea name="details" class="todo-input" placeholder="more details" cols="30" rows="5"></textarea>
 				<label for="due">due date:</label><input id="due" type="date"  name="date" value="2012-08-19"/>
 				</input>
 				<button id="submit">add task</button>
@@ -39,8 +38,16 @@
 			<script type="text/javascript">
    				$("#submit").click(function () {
  					var projectName = $('input[name=project]').val();
- 					var listItem = "<li>" + projectName + "</li>";
-					$('#outline').append(listItem);
+ 					var taskName = $('input[name=task]').val();
+ 					var details = $('textarea[name=details]').val();
+ 					// projectname - name of project
+ 					// taskname - name of task
+ 					var listItem1 = "<li><p>project:</p>" + projectName + "</li>";
+ 					var listItem2 = "<li>" + taskName + "</li>";	
+ 					var listItem3 = "<li>" + details + "</li>";				
+					$('#outline').append(listItem1);
+					$('#outline').append(listItem2);
+					$('#outline').append(listItem3);
 					$('.todo-input').val('');
 					return false;
     			}); 
