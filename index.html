@@ -25,11 +25,11 @@
 	<div id="main" class="wrapper clearfix">
 		<section id="content">
 			<form>
-				<input type="text" name="projectname" placeholder="project name" autofocus />
+				<input type="text" name="projectname" class="todo-input" placeholder="project name" autofocus />
 				</input>
-				<input type="text" name="task" placeholder="task" autofocus />
+				<input type="text" name="task" class="todo-input" placeholder="task" autofocus />
 				</input>
-				<textarea placeholder="more details" name="details" cols="30" rows="5">
+				<textarea placeholder="more details" class="todo-input" name="details" cols="30" rows="5">
 				</textarea>
 				<label for="due">due date:</label><input id="due" type="date"  name="date" value="2012-08-19"/>
 				</input>
@@ -41,13 +41,15 @@
  					var newtext = $('input[name=projectname]').val();
  					var listitem = "<li>" + newtext + "</li>";
 					$('#test').append(listitem);
+					$('.todo-input').val('');
 					return false;
     			});
+    			
+    			
     		</script>
 		</section>
 		<aside>
 			<ul id="test">
-				<li id="output"></li>
 			</ul>
 		</aside>
 	</div>
