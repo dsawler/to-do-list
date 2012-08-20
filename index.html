@@ -25,11 +25,11 @@
 	<div id="main" class="wrapper clearfix">
 		<section id="content">
 			<form>
-				<input type="text" name="projectname" class="todo-input" placeholder="project name" autofocus />
+				<input type="text" name="project" class="todo-input" placeholder="project name" autofocus />
 				</input>
 				<input type="text" name="task" class="todo-input" placeholder="task" autofocus />
 				</input>
-				<textarea placeholder="more details" class="todo-input" name="details" cols="30" rows="5">
+				<textarea name="details" class="todo-input" placeholder="more details" cols="30" rows="5">
 				</textarea>
 				<label for="due">due date:</label><input id="due" type="date"  name="date" value="2012-08-19"/>
 				</input>
@@ -38,18 +38,18 @@
 			
 			<script type="text/javascript">
    				$("#submit").click(function () {
- 					var newtext = $('input[name=projectname]').val();
- 					var listitem = "<li>" + newtext + "</li>";
-					$('#test').append(listitem);
+ 					var projectName = $('input[name=project]').val();
+ 					var listItem = "<li>" + projectName + "</li>";
+					$('#outline').append(listItem);
 					$('.todo-input').val('');
 					return false;
-    			});
-    			
-    			
+    			}); 
+    				 			
     		</script>
 		</section>
 		<aside>
-			<ul id="test">
+			<h3>To-Do List</h3>
+			<ul id="outline">
 			</ul>
 		</aside>
 	</div>
