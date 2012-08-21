@@ -40,14 +40,17 @@
  					var projectName = $('input[name=project]').val();
  					var taskName = $('input[name=task]').val();
  					var details = $('textarea[name=details]').val();
+ 					var dueDate = $('input[name=date]').val();
  					// projectname - name of project
  					// taskname - name of task
  					var listItem1 = "<li><p>project:</p>" + projectName + "</li>";
- 					var listItem2 = "<li>" + taskName + "</li>";	
- 					var listItem3 = "<li>" + details + "</li>";				
+ 					var listItem2 = "<li><p>task:</p>" + taskName + "</li>";	
+ 					var listItem3 = "<li>" + details + "</li>";		
+ 					var listItem4 = "<li>" + dueDate + "</li>";			
 					$('#outline').append(listItem1);
 					$('#outline').append(listItem2);
 					$('#outline').append(listItem3);
+					$('#outline').append(listItem4);
 					$('.todo-input').val('');
 					return false;
     			}); 
