@@ -24,6 +24,12 @@
 
 	<div id="main" class="wrapper clearfix">
 		<section id="content">
+			<h3>To-Do List</h3>
+			<ul id="outline">
+			</ul>			
+		</section>
+		
+		<aside>			
 			<form>
 				<input type="text" name="project" class="todo-input" placeholder="project name" autofocus />
 				</input>
@@ -43,9 +49,9 @@
  					var dueDate = $('input[name=date]').val();
  					// projectname - name of project
  					// taskname - name of task
- 					var listItem1 = "<li><p>project:</p>" + projectName + "</li>";
- 					var listItem2 = "<li><p>task:</p>" + taskName + "</li>";	
- 					var listItem3 = "<li>" + details + "</li>";		
+ 					var listItem1 = "<li><span>project:</span>" + projectName + "</li>";
+ 					var listItem2 = "<li><span>task:</span>" + taskName + "</li>";	
+ 					var listItem3 = "<li><span>more details:</span>" + details + "</li>";		
  					var listItem4 = "<li>" + dueDate + "</li>";			
 					$('#outline').append(listItem1);
 					$('#outline').append(listItem2);
@@ -56,11 +62,6 @@
     			}); 
     				 			
     		</script>
-		</section>
-		<aside>
-			<h3>To-Do List</h3>
-			<ul id="outline">
-			</ul>
 		</aside>
 	</div>
 </body>
