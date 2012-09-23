@@ -52,11 +52,13 @@
  					var listItem1 = "<li><span>project:</span>" + projectName + "</li>";
  					var listItem2 = "<li><span>task:</span>" + taskName + "</li>";	
  					var listItem3 = "<li><span>more details:</span>" + details + "</li>";		
- 					var listItem4 = "<li>" + dueDate + "</li>";			
-					$('#outline').append(listItem1);
-					$('#outline').append(listItem2);
-					$('#outline').append(listItem3);
-					$('#outline').append(listItem4);
+ 					var listItem4 = "<li>" + dueDate + "</li>";	
+ 					var projectContainer = $("<div class='projectContainer'></div>");
+ 					projectContainer.append(listItem1);
+ 					projectContainer.append(listItem2);
+ 					projectContainer.append(listItem3);
+ 					projectContainer.append(listItem4);
+					$('#outline').append(projectContainer);
 					$('.todo-input').val('');
 					return false;
     			}); 
